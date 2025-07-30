@@ -201,6 +201,7 @@ if pctAtoms < 0.1
     symAtoms = ' ppm';
 end
 %% calculating ion percentage
+% peakcount is diveded by all ion ranged
 ions = pos.ion;
 ions(isundefined(ions))='0';
 numIons = sum(ions~='0');
