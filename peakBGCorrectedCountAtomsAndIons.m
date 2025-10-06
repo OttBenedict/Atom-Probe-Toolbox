@@ -192,7 +192,7 @@ pkcnt = sumCnt - sumFitCnt;
 
 %% calculating atom percentage
 % peakcount is diveded by all atoms of whole dataset
-numAtoms = max(pos.atomNum);
+numAtoms = max(pos.ionIdx);
 pctAtoms = pkcnt/numAtoms * 100;
 symAtoms = ' %';
 
