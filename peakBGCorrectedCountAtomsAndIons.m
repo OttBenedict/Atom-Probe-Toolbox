@@ -175,6 +175,7 @@ entireRange = table ((mcScale(idxBeg:idxEnd))', (counts(idxBeg:idxEnd))', in(idx
 
 % Peak location - find Peak position
 pkloc = entireRange.mcRange(entireRange.counts == max(entireRange.counts));
+pkloc_mean = mean(pkloc);
 
 
 %% calculate linear fit of baseline
@@ -234,7 +235,7 @@ if figOut == 1
     txt = {['ions in peak: ' num2str(round(pkcnt))],...
         ['pct of all atoms: ' num2str(pctAtoms,3) symAtoms],...
         ['pct of all ions: ' num2str(pctIons,3) symIons],...
-        ['peak location: ' num2str(pkloc) ' Da']};
+       ['peak location: ' num2str(pkloc_mean, '%.4f') ' Da']};
     %%%%%%%%%%%%%%%%% ab hier eigentlich nach 'r' und 'a' und vor OUtput
     %%%%%%%%%%%%%%%%% table
     % plotting numerical results
